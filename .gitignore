@@ -3,4 +3,4 @@ agent_with_multitools/.env
 agent_with_multitools/main2.py
 agent_with_multitools/my_tools/listing_tool.py
 myenv/
-main.py
+/main.py
