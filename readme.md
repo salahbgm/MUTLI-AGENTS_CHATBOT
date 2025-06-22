@@ -23,7 +23,7 @@ This application features two main modes:
 ## 📂 Project Structure
 
 ```
-RFP_Assistant/
+MUTLI-AGENTS_CHATBOT/
 ├── agent_with_multitools/
 │   ├── main.py <<-- Lanch this main to run the project 
 │   ├── workflow.py
@@ -46,7 +46,7 @@ RFP_Assistant/
 
 ```bash
 git clone https://github.com/your_username/MUTLI-AGENTS_CHATBOT.git
-cd RFP_Assistant
+cd MUTLI-AGENTS_CHATBOT
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\Activate.ps1 on Windows
 pip install -r requirements.txt
