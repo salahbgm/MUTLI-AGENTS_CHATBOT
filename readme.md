@@ -1,4 +1,4 @@
-# 🤖 RFP Assistant
+# 🤖 Multi-Agent ChatBot Assistant
 
 An intelligent multi-agent assistant for research, synthesis, and analysis of complex topics.  
 This application features two main modes:
@@ -45,7 +45,7 @@ RFP_Assistant/
 ## 🛠️ Installation
 
 ```bash
-git clone https://github.com/your_username/rfp-assistant.git
+git clone https://github.com/your_username/MUTLI-AGENTS_CHATBOT.git
 cd RFP_Assistant
 python -m venv venv
 source venv/bin/activate  # or venv\Scripts\Activate.ps1 on Windows
@@ -117,8 +117,7 @@ PINECONE_INDEX_NAME=your-key
 - [x] Unified agent interface
 - [x] DeepResearch flow with HITL
 - [x] Per-step runtime tracking
-- [ ] PDF + JSON export
-- [ ] Upload & analyze documents
+
 
 ---
 

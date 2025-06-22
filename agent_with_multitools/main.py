@@ -9,7 +9,7 @@ from langchain_core.messages import HumanMessage, AIMessage
 from workflow import graph as multitask_graph
 from tracking import tracker
 
-st.set_page_config(page_title="RFP Assistant", layout="wide")
+st.set_page_config(page_title="Multi-Agent ChatBot", layout="wide")
 
 # Import DeepResearch interface
 import sys
@@ -24,10 +24,10 @@ from DeepResearch_HITL.coordinator import deepresearch_ui
 # ─────────────────────────────────────────────
 # ⚙️ Session Initialization
 # ─────────────────────────────────────────────
-st.title("🧠 RFP Assistant")
+st.title("🧠 Multi-Agent ChatBot")
 
 if "mode" not in st.session_state:
-    st.session_state.mode = "multi"  # Default mode
+    st.session_state.mode = "multi-tools"  # Default mode
 
 if "conversation" not in st.session_state:
     st.session_state.conversation = []
@@ -49,7 +49,7 @@ with col1:
 
 with col3:
     if st.button("🔍 DeepResearch" if st.session_state.mode != "deep" else "🧰 Multi-Tools"):
-        st.session_state.mode = "deep" if st.session_state.mode != "deep" else "multi"
+        st.session_state.mode = "DeepResearch" if st.session_state.mode != "DeepResearch" else "multi-tools"
         st.rerun()
 
 st.markdown(f"### 🎯 Active Agent: `{st.session_state.mode}`")
@@ -57,7 +57,7 @@ st.markdown(f"### 🎯 Active Agent: `{st.session_state.mode}`")
 # ─────────────────────────────────────────────
 # 💬 Dynamic Interface Based on Selected Mode
 # ─────────────────────────────────────────────
-if st.session_state.mode == "multi":
+if st.session_state.mode == "multi-tools":
     # User input field
     user_input = st.text_area("💬 Ask your question here:", height=150)
 
@@ -105,6 +105,6 @@ if st.session_state.mode == "multi":
                 with st.expander(f"✅ Answer {j}", expanded=True):
                     st.markdown(reply)
 
-elif st.session_state.mode == "deep":
+elif st.session_state.mode == "DeepResearch":
     # Render the full DeepResearch interface
     deepresearch_ui()
